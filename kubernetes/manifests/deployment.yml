@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go_webapp
+  labels:
+    app: go_webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go_webapp
+  template:
+    metadata:
+      labels:
+        app: go_webapp
+    spec:
+      containers:
+      - name: go_webapp
+        image: custyblak/go_webapp:v1
+        ports:
+        - containerPort: 8080
+
