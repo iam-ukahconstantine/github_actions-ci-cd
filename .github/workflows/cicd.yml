@@ -97,7 +97,7 @@ jobs:
                 git config --global user.name "iam-ukahconstantine"
                 git add Helm/go_webapp-chart/values.yaml
                 git commit -m "Updated the tag in the Helm chart"
-                git push origin cicd_dev
+                git push origin main
 
 
 
