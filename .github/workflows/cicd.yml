@@ -3,7 +3,7 @@ name: ci
 on:
     push:
         branches:
-            - cicd_dev
+            - main
         paths-ignore:
             - 'README.md'
             - 'helm/**'
@@ -88,7 +88,7 @@ jobs:
         -
             name: updating the tag entry in the helm chart
             run: |
-                sed -i 's/tag: "[^"]*"/tag: "github.run_Id"/' Helm/go_webapp-chart/values.yaml
+                sed -i 's/tag: "[^"]*"/tag: "${{github.run_Id}}"/' Helm/go_webapp-chart/values.yaml
         
         -
             name: Commit and push the changes
