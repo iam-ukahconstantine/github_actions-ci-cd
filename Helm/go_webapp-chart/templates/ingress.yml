@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: go-webapp.local.058264207977.realhandsonlabs.net
+  - host: go-webapp.local.654654147563.realhandsonlabs.net
     http:
       paths:
       - path: /
